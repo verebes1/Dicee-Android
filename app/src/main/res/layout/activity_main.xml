@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/newbackground"
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/rollButton"
+        style="@android:style/Widget.Material.Button"
+        android:layout_width="169dp"
+        android:layout_height="78dp"
+        android:layout_marginBottom="68dp"
+        android:background="@color/colorPrimaryDark"
+        android:text="@string/rollButton"
+        android:textColor="@android:color/background_light"
+        android:textSize="@android:dimen/app_icon_size"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/image_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="@string/logo_image"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/dicee_logo" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="395dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="179dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/image_logo">
+
+        <ImageView
+            android:id="@+id/dice1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/dice1"
+            app:srcCompat="@drawable/dice6" />
+
+        <ImageView
+            android:id="@+id/dice2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@string/dice2"
+            app:srcCompat="@drawable/dice5" />
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
