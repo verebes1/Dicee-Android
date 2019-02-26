@@ -19,6 +19,7 @@
         android:layout_height="78dp"
         android:layout_marginBottom="68dp"
         android:background="@color/colorPrimaryDark"
+        android:onClick="buttonRoll"
         android:text="@string/rollButton"
         android:textColor="@android:color/background_light"
         android:textSize="@android:dimen/app_icon_size"
