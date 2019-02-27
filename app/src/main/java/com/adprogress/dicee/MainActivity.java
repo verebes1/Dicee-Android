@@ -12,6 +12,8 @@ import java.util.Random;
 public class MainActivity extends AppCompatActivity {
 
     Random randomNumberGenerator = new Random();
+    ImageView leftDice;
+    ImageView rightDice;
 
     int[] diceArray = {R.drawable.dice1,
             R.drawable.dice2,
@@ -25,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        leftDice = findViewById(R.id.dice1);
+        rightDice = findViewById(R.id.dice2);
     }
 
     public void buttonRoll(View v) {
-        final ImageView leftDice = this.findViewById(R.id.dice1);
-        final ImageView rightDice = this.findViewById(R.id.dice2);
         leftDice.setImageResource(diceArray[randomNumberGenerator.nextInt(6)]);
         rightDice.setImageResource(diceArray[randomNumberGenerator.nextInt(6)]);
     }
